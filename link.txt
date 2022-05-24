@@ -1,0 +1,22 @@
+Links bellow:
+
+"How to Think Like a Computer Scientist 
+https://www.greenteapress.com/thinkpython/html/thinkpython001.html
+
+An Introduction to Python
+http://tdc-www.harvard.edu/Python.pdf
+
+The Python Standard Library
+https://docs.python.org/3/library/
+
+Quick Reference Card
+https://michaelgoerz.net/refcards/python_refcard.pdf
+
+Introduction to Computer Science and Programming
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/
+
+
+    “You know you are working on clean code when each routine you read turns out to be pretty much what you expected. 
+    You can call it beautiful code when the code also makes it look like the language was made for the problem.”
+
+    — Ward Cunningham
