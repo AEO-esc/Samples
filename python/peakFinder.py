@@ -37,12 +37,15 @@ class Solution(object):
         #Right side is bigger. Recursive search the right side of the array for peak
         else:
             return Solution.findPeakBinarySearch(list, (middle + 1), high, size);
-            
-array = [6,6,4,3,9,1,4,5]
-low = 0
-high = len(array)     
-size = len(array)
-print('Index and value of array is',Solution.findLinearPeakElement(array))
-print('Binary search peak at index:', Solution.findPeakBinarySearch(array, low, high, size))
-#print("Index of peak point is at ", Solution.findPeakElemnt(nums))
-#print("Index of peak element is at index ", Solution.findBetterPeakElement(nums))
+def main() -> None:            
+    array = [6,6,4,3,9,1,4,5]
+    low = 0
+    high = len(array)     
+    size = len(array)
+    print('Index and value of array is',Solution.findLinearPeakElement(array))
+    print('Binary search peak at index:', Solution.findPeakBinarySearch(array, low, high, size))
+    #print("Index of peak point is at ", Solution.findPeakElemnt(nums))
+    #print("Index of peak element is at index ", Solution.findBetterPeakElement(nums))
+
+if __name__ == "__main__":
+    main()
