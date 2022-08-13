@@ -37,15 +37,28 @@ class Solution(object):
         #Right side is bigger. Recursive search the right side of the array for peak
         else:
             return Solution.findPeakBinarySearch(list, (middle + 1), high, size);
-def main() -> None:            
-    array = [6,6,4,3,9,1,4,5]
-    low = 0
-    high = len(array)     
-    size = len(array)
-    print('Index and value of array is',Solution.findLinearPeakElement(array))
-    print('Binary search peak at index:', Solution.findPeakBinarySearch(array, low, high, size))
-    #print("Index of peak point is at ", Solution.findPeakElemnt(nums))
-    #print("Index of peak element is at index ", Solution.findBetterPeakElement(nums))
+    # Find the peak in O(n) time complexity
+    def findPeak(arr, n) :
+        # check if the first or last element is the peak element
+        if(n == 1):
+            return 0
+        if (arr[0] >= arr[1]):
+            return 0
+        if(arr[n -1] >= arr[n -2]):
+            return n - 1
+        # loop thru list and check other elements
+        for i in range(1, n - 1):
+            if(arr[i] >= arr[i-1] and arr[i] >= arr[i+1]):
+                return i
 
-if __name__ == "__main__":
-    main()
+print("Index of peak point is", findPeak(peak,n))
+time.sleep(3)
+            
+array = [6,6,4,3,9,1,4,5]
+low = 0
+high = len(array)     
+size = len(array)
+print('Index and value of array is',Solution.findLinearPeakElement(array))
+print('Binary search peak at index:', Solution.findPeakBinarySearch(array, low, high, size))
+#print("Index of peak point is at ", Solution.findPeakElemnt(nums))
+#print("Index of peak element is at index ", Solution.findBetterPeakElement(nums))

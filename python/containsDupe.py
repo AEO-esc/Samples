@@ -1,34 +1,35 @@
-
-# Given an integer array nums, return true if any value appears at least twice in the array,
-#  and return false if every element is distinct.
-
-from tokenize import Triple
-
-
-class Solution(object):
-    def containsDuplicateBrute(self, nums):
-        # brute force method 
-        for i in range (0, len(nums)):
+class Solution():
+    def containsDuplicate(self, nums):
+        # Brute force method
+        for i in range(0, len(nums)):
             for j in range(0, i):
-                if nums[j] == nums[i]:
+                if(nums[j] == nums[i]):
                     return True
         return False
-        # Time Complexity O(n^2) since we are looping through the array n * n times
-        # Space complexity O(1) as we only use constant space
+    # Time Complexity O(n ^2): Worst case is n(n-1)/2
+    # Space Complexity is O(1) as we only used constant extra space
 
-    def containsDuplicate(self, nums):
-        # convert the array to a set to remove the duplicates
-        # if the set becomes smaller, it had duplicates
-        if len(set(nums)) < len(nums):
-            return True
-        else:
-            return False
+    def containsDuplicateSorted(self, nums):
+        # lets use Python's internal sort function
+        sort = sorted(nums)
+
+        # Since the array is sorted, we can check neighbor for dupe
+        for i in range(0, len(sort) - 1):
+            if sort[i] == sort[i + 1]:
+                return True;
+
+        return False;
+        # Time Complexity O(n log n) since the heapsort takes the majority of the time.
+        # Space Complexity O(1) since heapsort is used
 
 def main() -> None:
-    # initialize class
-    mySolution = Solution()
-    sortedArray = [1,1,1,3,3,4,3,2,4,2]
-    print(mySolution.containsDuplicateBrute(sortedArray))
+    nums = [1,1,1,3,3,4,3,2,4,2]
+    nums2 = [1,2,3,4,5,6,7,8,9,10]
+    #initialize class
+    temp = Solution()
+    print(temp.containsDuplicate(nums2))
+    print(temp.containsDuplicateSorted(nums))
+    print(temp.containsDuplicateSorted(nums2))
 
-if __name__ == "__main__":
-    main();
+if __name__ == '__main__':
+    main()
