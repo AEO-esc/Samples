@@ -1,5 +1,3 @@
-
-from tracemalloc import start
 import unittest
 import time
 

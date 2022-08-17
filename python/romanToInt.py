@@ -1,3 +1,6 @@
+import unittest
+
+# Create dictonary data structure for lookup
 lookupTable = {
     "I": 1,
     "V": 5,
@@ -20,10 +23,30 @@ class Solution:
             # No subtraction so continue as normal
             else:
                 total += lookupTable[s[i]]
-                i += 1; # jump ahead 
+                i += 1; # jump ahead
         return total;
-        
 
+        # Time Complexity: O(1) since we are utilizing a lookup table
+        # Space Complexity: O(1) since we are using a constant number of sinle-variable lookiups
 
-roman = input("Enter a Roman numeral: ")
-print("Your Roman numeral is: ", Solution.romanToInt(roman))
+"""Unit testing for the Roman Integer to Integer class & function
+Args:
+    A valid array of letter that can be used as Roman integers
+Returns:
+    boolean: Pass or Fail if it equals the integer the Roman numeral is valued at
+"""
+
+class TestProgram(unittest.TestCase):
+    def test_case_01(self):
+        self.assertEqual(Solution.romanToInt('MCMXCIV'), 1994)
+    def test_case_02(self):
+        self.assertEqual(Solution.romanToInt('LVIII'), 58)
+    def test_case_03(self):
+        self.assertEqual(Solution.romanToInt('MMMCMXCIX'), 3999)
+
+def main() ->None:
+    roman = input("Enter a Roman numeral: ")
+    print("Your Roman numeral is: ", Solution.romanToInt(roman))
+
+if __name__ =="__main__":
+    main()
