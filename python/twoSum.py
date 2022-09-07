@@ -1,4 +1,3 @@
-from ssl import ALERT_DESCRIPTION_UNKNOWN_CA
 from typing import List
 import unittest
 
