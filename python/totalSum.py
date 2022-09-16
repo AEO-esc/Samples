@@ -14,5 +14,7 @@ def main() ->None:
     myNumbers = [1,2,3,4,5]
     print(arraySum(myNumbers))
 
+
+
 if __name__ == '__main__':
     main()
