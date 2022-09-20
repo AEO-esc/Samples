@@ -1,4 +1,3 @@
-from contextlib import ContextDecorator
 from email.message import EmailMessage
 from app2 import email_password
 import ssl
@@ -24,7 +23,9 @@ class Email():
 
         # connect over SSL encrypted socket
         with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
+            # use SMTP to login to our email account
             smtp.login(Email.emailSender, Email.emailPassword)
+            # send the email as a string message to sender
             smtp.sendmail(Email.emailSender, Email.emailReceiver, email.as_string())
 
 def main() -> None:
