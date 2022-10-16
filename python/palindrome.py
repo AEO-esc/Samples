@@ -1,3 +1,5 @@
+import unittest
+
 class Solution():
     def isPalindrome(self, s) -> bool:
         left, right, = 0, len(s)-1
@@ -32,3 +34,10 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        input = "A man, a plan, a canal: Panama"
+        expected = True
+        actual = Solution.isPalindrome(input)
+        self.assertEqual(actual, expected)
