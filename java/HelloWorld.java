@@ -6,3 +6,9 @@ class Solution
     }
 
 }
+
+class mySolution{
+    public static void solution(){
+        System.out.println("Hello again.");
+    }
+}
