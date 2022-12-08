@@ -1,0 +1,74 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch PizzaStore",
+            "request": "launch",
+            "mainClass": "PizzaStore",
+            "projectName": "Samples_9548db5e"
+        },
+        {
+            "type": "java",
+            "name": "Launch charBoolean",
+            "request": "launch",
+            "mainClass": "charBoolean",
+            "projectName": "Samples_9548db5e"
+        },
+        {
+            "type": "java",
+            "name": "Launch floatAndDouble",
+            "request": "launch",
+            "mainClass": "floatAndDouble",
+            "projectName": "Samples_9548db5e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Samples_9548db5e"
+        },
+        {
+            "type": "java",
+            "name": "Launch primitiveTypes",
+            "request": "launch",
+            "mainClass": "primitiveTypes",
+            "projectName": "Samples_9548db5e"
+        },
+        {
+            "type": "java",
+            "name": "Launch byteShortIntLong",
+            "request": "launch",
+            "mainClass": "byteShortIntLong",
+            "projectName": "Samples_9548db5e"
+        },
+        {
+            "type": "java",
+            "name": "Launch hello",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "Samples_9548db5e"
+        },
+        {
+            "type": "java",
+            "name": "Launch reverseString",
+            "request": "launch",
+            "mainClass": "reverseString",
+            "projectName": "Samples_9548db5e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "Samples_9548db5e"
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        }
+    ]
+}
