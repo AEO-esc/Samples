@@ -1,0 +1,19 @@
+---
+
+number:
+  one,
+  two,
+  three
+
+numbers: [one, two, three]
+
+# lists of books
+author: &jPaul
+  name: James
+  last name: Paul
+
+book:
+  - 1923:
+    author: James
+  - My Biography:
+    author: James
