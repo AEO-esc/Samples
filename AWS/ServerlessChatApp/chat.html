@@ -56,7 +56,21 @@
 <script src="js/site.js"></script>
 <script type="text/javascript">
     $(function () {
+        $('#message').focus().keypress(function (event) {
+            if (event.keyCode === 13) {
+                window.ChatApp.send();
+            }
+        });
+        $('#send').on('click', window.ChatApp.send);
         window.ChatApp.loadChat();
+        window.setInterval(window.ChatApp.loadChat, 5000);
+        window.setInterval(function () {
+            var times = $('.messageTime');
+            for (var i = 0; i < times.length; i++) {
+                var jqTimes = $(times[i]);
+                jqTimes.text(moment(Number(jqTimes.data('time'))).fromNow());
+            }
+        }, 10000);
     });
 </script>
 </body>

@@ -15,6 +15,12 @@ var ChatApp = window.ChatApp || {};
                     }
                 });
 
+                // add a timsestamp to our UI and format from epoch time
+                var last = '&nbsp;';
+                if (convo.last) {
+                    last = moment(new Date(convo.last)).fromNow();
+                }
+
                 $('TBODY').append('<tr><td><a href="chat.html#' + convo.id + '">' + otherUsers.join(', ') + '</a></td></tr>');
             });
             $('TBODY').append('<tr><td></td></tr>');
